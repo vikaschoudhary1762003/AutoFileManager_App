@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginTop="50dp">
+
+        <!-- BACK -->
+        <TextView
+            android:id="@+id/BackButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="←"
+            android:textSize="28sp"
+            android:textColor="#171717"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Audio Downloads"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#171717"
+            android:gravity="center" />
+
+        <!-- MORE -->
+        <TextView
+            android:id="@+id/moreButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="⋮"
+            android:textSize="25sp"
+            android:textColor="#171717"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+
+    <!-- SUMMARY -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFF7E8">
+
+        <!-- AUDIO ICON -->
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="♫"
+            android:textSize="34sp"
+            android:textColor="#E58A00"
+            android:background="#FFE9B8" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="14dp">
+
+            <TextView
+                android:text="Downloaded Audio"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/audioCount"
+                android:text="24 Files"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="#171717"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Total Size"
+                android:textSize="12sp"
+                android:textColor="#777777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/audioTotalSize"
+                android:text="245 MB"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#E58A00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- SORT BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:text="Audio Files"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#171717"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sortButton"
+            android:text="Sort  ▾"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" />
+
+    </LinearLayout>
+
+
+    <!-- AUDIO FILE LIST -->
+    <ScrollView
+        android:id="@+id/audioScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/audioFileContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="20dp">
+
+            <!--
+                REAL AUDIO FILES WILL BE ADDED HERE
+                FROM JAVA CODE.
+            -->
+
+
+            <!-- SAMPLE AUDIO ITEM -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- AUDIO ICON -->
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="♫"
+                    android:textSize="30sp"
+                    android:textColor="#E58A00"
+                    android:background="#FFF3D6" />
+
+                <!-- FILE INFORMATION -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:text="music.mp3"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#171717"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="/Download/"
+                        android:textSize="11sp"
+                        android:textColor="#777777"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Today • 10:30 AM"
+                        android:textSize="10sp"
+                        android:textColor="#999999"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- SIZE -->
+                <TextView
+                    android:text="5.2 MB"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+
+                <!-- MORE -->
+                <TextView
+                    android:id="@+id/audioMoreButton"
+                    android:layout_width="30dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="⋮"
+                    android:textSize="22sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- BOTTOM -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#F8F9FA">
+
+        <TextView
+            android:text="Internal Storage  ›  Download"
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/audioFileCountBottom"
+            android:text="24 files"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

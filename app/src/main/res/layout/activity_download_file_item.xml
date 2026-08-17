@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- ===================================================== -->
+    <!-- FILE ICON -->
+    <!-- ===================================================== -->
+
+    <TextView
+        android:id="@+id/fileIcon"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:gravity="center"
+        android:text="📄"
+        android:textSize="28sp" />
+
+
+    <!-- ===================================================== -->
+    <!-- FILE DETAILS -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp">
+
+        <!-- FILE NAME -->
+
+        <TextView
+            android:id="@+id/fileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#171717"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+
+        <!-- FILE PATH -->
+
+        <TextView
+            android:id="@+id/filePath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="11sp"
+            android:textColor="#777777"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+
+    <!-- ===================================================== -->
+    <!-- SIZE + TIME -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <!-- FILE SIZE -->
+
+        <TextView
+            android:id="@+id/fileSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="#222222"
+            android:gravity="end" />
+
+
+        <!-- MODIFIED TIME -->
+
+        <TextView
+            android:id="@+id/fileTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="11sp"
+            android:textColor="#777777"
+            android:gravity="end"
+            android:layout_marginTop="5dp" />
+
+    </LinearLayout>
+
+
+    <!-- ===================================================== -->
+    <!-- MORE BUTTON -->
+    <!-- ===================================================== -->
+
+    <TextView
+        android:id="@+id/fileMoreButton"
+        android:layout_width="30dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:text="⋮"
+        android:textSize="22sp"
+        android:textColor="#333333"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

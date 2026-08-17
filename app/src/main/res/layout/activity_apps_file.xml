@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- TOP BAR -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/BackButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="←"
+            android:textSize="28sp"
+            android:textColor="#171717" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Apps"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#171717"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/moreButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="⋮"
+            android:textSize="25sp"
+            android:textColor="#171717" />
+
+    </LinearLayout>
+
+
+    <!-- SUMMARY -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#EFFAF1">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="▦"
+            android:textSize="34sp"
+            android:textColor="#43A047"
+            android:background="#DCF3DE" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="14dp">
+
+            <TextView
+                android:text="Installed Applications"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/appCount"
+                android:text="42 Apps"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="#171717"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="App Storage"
+                android:textSize="12sp"
+                android:textColor="#777777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/appTotalSize"
+                android:text="8.4 GB"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#43A047"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- SEARCH / SORT -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:text="Installed Apps"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#171717"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sortButton"
+            android:text="Sort  ▾"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <!-- APP LIST -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/appContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+
+            <!-- APP ITEM -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- APP ICON -->
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="#43A047"
+                    android:background="#E8F5E9" />
+
+                <!-- APP DETAILS -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/appName"
+                        android:text="Example App"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#171717"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/packageName"
+                        android:text="com.example.app"
+                        android:textSize="11sp"
+                        android:textColor="#777777"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Installed"
+                        android:textSize="10sp"
+                        android:textColor="#999999"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- SIZE -->
+
+                <TextView
+                    android:id="@+id/appSize"
+                    android:text="125 MB"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content" />
+
+                <!-- MORE -->
+
+                <TextView
+                    android:id="@+id/appMoreButton"
+                    android:layout_width="30dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="⋮"
+                    android:textSize="22sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- BOTTOM -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#F8F9FA">
+
+        <TextView
+            android:text="Installed Applications"
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/appCountBottom"
+            android:text="42 apps"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginTop="50dp">
+
+        <!-- BACK -->
+        <TextView
+            android:id="@+id/BackButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="←"
+            android:textSize="28sp"
+            android:textColor="#171717"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Image Downloads"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#171717"
+            android:gravity="center" />
+
+        <!-- MORE -->
+        <TextView
+            android:id="@+id/moreButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="⋮"
+            android:textSize="25sp"
+            android:textColor="#171717"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+
+    <!-- SUMMARY CARD -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#EFF8FF">
+
+        <!-- IMAGE ICON -->
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="▧"
+            android:textSize="34sp"
+            android:textColor="#2878E8"
+            android:background="#DCEEFF" />
+
+        <!-- COUNT -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="14dp">
+
+            <TextView
+                android:text="Downloaded Images"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/imageCount"
+                android:text="48 Files"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="#171717"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- TOTAL SIZE -->
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Total Size"
+                android:textSize="12sp"
+                android:textColor="#777777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/imageTotalSize"
+                android:text="580 MB"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2878E8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- SORT -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:text="Image Files"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#171717"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sortButton"
+            android:text="Sort  ▾"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" />
+
+    </LinearLayout>
+
+
+    <!-- IMAGE FILE LIST -->
+
+    <ScrollView
+        android:id="@+id/imageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/imageFileContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="20dp">
+
+
+            <!-- IMAGE ITEM 1 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+
+                <!-- IMAGE PREVIEW -->
+
+                <ImageView
+                    android:id="@+id/imagePreview"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:scaleType="centerCrop"
+                    android:background="#EEEEEE"
+                    android:contentDescription="Image preview" />
+
+                <!-- DETAILS -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/imageFileName"
+                        android:text="nature_view.jpg"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#171717"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/imageFilePath"
+                        android:text="/Download/"
+                        android:textSize="11sp"
+                        android:textColor="#777777"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/imageFileDate"
+                        android:text="Today • 10:30 AM"
+                        android:textSize="10sp"
+                        android:textColor="#999999"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- SIZE -->
+
+                <TextView
+                    android:id="@+id/imageFileSize"
+                    android:text="2.5 MB"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+
+                <!-- MORE -->
+
+                <TextView
+                    android:id="@+id/imageMoreButton"
+                    android:layout_width="30dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="⋮"
+                    android:textSize="22sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE" />
+
+
+            <!-- IMAGE ITEM 2 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:id="@+id/imagePreview2"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:scaleType="centerCrop"
+                    android:background="#EEEEEE"
+                    android:contentDescription="Image preview" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:text="vacation_photo.png"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#171717"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="/Download/"
+                        android:textSize="11sp"
+                        android:textColor="#777777"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Today • 09:15 AM"
+                        android:textSize="10sp"
+                        android:textColor="#999999"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:text="4.8 MB"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="⋮"
+                    android:textSize="22sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE" />
+
+
+            <!-- IMAGE ITEM 3 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:id="@+id/imagePreview3"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:scaleType="centerCrop"
+                    android:background="#EEEEEE"
+                    android:contentDescription="Image preview" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:text="screenshot_2026.png"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#171717"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="/Download/"
+                        android:textSize="11sp"
+                        android:textColor="#777777"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Yesterday • 06:40 PM"
+                        android:textSize="10sp"
+                        android:textColor="#999999"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:text="1.2 MB"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="⋮"
+                    android:textSize="22sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- BOTTOM LOCATION -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#F8F9FA">
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="▣"
+            android:textSize="24sp"
+            android:textColor="#2878E8" />
+
+        <TextView
+            android:text="Internal Storage  ›  Download"
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/imageFileCountBottom"
+            android:text="48 files"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

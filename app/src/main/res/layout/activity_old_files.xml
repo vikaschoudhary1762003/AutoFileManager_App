@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="50dp">
+
+        <TextView
+            android:id="@+id/BackButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="←"
+            android:textSize="28sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Old Files"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:text="⋮"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- SUMMARY -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="@drawable/bg_purple_card">
+
+                <TextView
+                    android:text="📅"
+                    android:textSize="38sp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="3.32 GB"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="310 Files Found"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="Files not modified in selected time period."
+                        android:textSize="12sp"
+                        android:textColor="#666666"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Sort by: Oldest First   ▾"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="18dp"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- OLD FILE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="📄"
+                    android:textSize="28sp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="old_document.pdf"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="/Documents/"
+                        android:textSize="11sp"
+                        android:textColor="#777777"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="Modified: 10 Jan 2020"
+                        android:textSize="10sp"
+                        android:textColor="#888888"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:text="85 MB"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"/>
+
+            <TextView
+                android:text="family_photo_2019.jpg       4.2 MB"
+                android:textSize="13sp"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"/>
+
+            <TextView
+                android:text="old_backup.zip                 256 MB"
+                android:textSize="13sp"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"/>
+
+            <TextView
+                android:text="report_2019.docx                2.1 MB"
+                android:textSize="13sp"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"/>
+
+            <TextView
+                android:text="video_2018.mp4                 320 MB"
+                android:textSize="13sp"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:text="0 Files Selected (0 B)"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Delete"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF2929"
+            android:layout_width="100dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
