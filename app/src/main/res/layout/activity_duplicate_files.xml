@@ -84,7 +84,8 @@
                     android:paddingStart="12dp">
 
                     <TextView
-                        android:text="2.45 GB"
+                        android:id="@+id/duplicateStorageText"
+                        android:text="0 GB"
                         android:textSize="22sp"
                         android:textStyle="bold"
                         android:textColor="#111111"
@@ -92,7 +93,8 @@
                         android:layout_height="wrap_content"/>
 
                     <TextView
-                        android:text="120 Files Found"
+                        android:id="@+id/duplicateCountText"
+                        android:text="0 Files Found"
                         android:textSize="14sp"
                         android:textColor="#222222"
                         android:layout_width="wrap_content"
@@ -132,7 +134,7 @@
 
             <!-- GROUP 1 -->
             <TextView
-                android:text="Group 1        2 Files       4.25 MB"
+                android:text=" Files        MB"
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:textColor="#333333"
@@ -142,54 +144,6 @@
                 android:layout_height="45dp"/>
 
             <!-- FILE -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:gravity="center_vertical"
-                android:padding="8dp">
-
-                <TextView
-                    android:text="📄"
-                    android:textSize="28sp"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:gravity="center"/>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:text="IMG_20230520_153020.jpg"
-                        android:textSize="13sp"
-                        android:textStyle="bold"
-                        android:textColor="#222222"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
-                    <TextView
-                        android:text="/DCIM/Camera/"
-                        android:textSize="11sp"
-                        android:textColor="#777777"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:text="2.12 MB"
-                    android:textSize="12sp"
-                    android:textColor="#222222"
-                    android:layout_width="65dp"
-                    android:layout_height="wrap_content"/>
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
@@ -198,52 +152,13 @@
 
             <!-- SECOND DUPLICATE -->
             <LinearLayout
+                android:id="@+id/duplicateFilesContainer"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:gravity="center_vertical"
-                android:padding="8dp">
-
-                <TextView
-                    android:text="📄"
-                    android:textSize="28sp"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:gravity="center"/>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:text="IMG_20230520_153020 (1).jpg"
-                        android:textSize="13sp"
-                        android:textStyle="bold"
-                        android:textColor="#222222"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
-                    <TextView
-                        android:text="/Download/"
-                        android:textSize="11sp"
-                        android:textColor="#777777"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:text="2.12 MB"
-                    android:textSize="12sp"
-                    android:layout_width="65dp"
-                    android:layout_height="wrap_content"/>
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="20dp"/>
 
         </LinearLayout>
 
@@ -253,21 +168,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:gravity="center_vertical"
+        android:gravity="right"
         android:padding="10dp"
         android:background="#F8FFF9">
 
-        <TextView
-            android:id="@+id/duplicateSelectedText"
-            android:text="120 Files Selected (2.45 GB)"
-            android:textSize="14sp"
-            android:textColor="#222222"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"/>
-
         <Button
-            android:id="@+id/deleteDuplicateButton"
+            android:id="@+id/deleteSelectedButton"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Delete"

@@ -126,7 +126,7 @@
                     android:text="↓"
                     android:textSize="42sp"
                     android:textStyle="bold"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     />
 
                 <!-- FILE COUNT -->
@@ -147,7 +147,7 @@
 
                     <TextView
                         android:id="@+id/totalDownloadFiles"
-                        android:text="0 files"
+                        android:text=" files"
                         android:textSize="23sp"
                         android:textStyle="bold"
                         android:textColor="#111111"
@@ -173,7 +173,7 @@
 
                     <TextView
                         android:id="@+id/totalDownloadSize"
-                        android:text="2.45 GB"
+                        android:text=" GB"
                         android:textSize="22sp"
                         android:textStyle="bold"
                         android:textColor="#1558D6"
@@ -219,66 +219,17 @@
 
                     <!-- IMAGES -->
 
-                    <TextView
-                        android:id="@+id/categoryImages"
-                        android:layout_width="110dp"
-                        android:layout_height="48dp"
-                        android:gravity="center"
-                        android:text="▧  Images"
-                        android:textSize="15sp"
-                        android:textColor="#222222"
-                        android:layout_marginEnd="10dp" />
-
 
                     <!-- VIDEOS -->
-
-                    <TextView
-                        android:id="@+id/categoryVideos"
-                        android:layout_width="110dp"
-                        android:layout_height="48dp"
-                        android:gravity="center"
-                        android:text="▶  Videos"
-                        android:textSize="15sp"
-                        android:textColor="#222222"
-                        android:layout_marginEnd="10dp" />
 
 
                     <!-- AUDIO -->
 
-                    <TextView
-                        android:id="@+id/categoryAudio"
-                        android:layout_width="105dp"
-                        android:layout_height="48dp"
-                        android:gravity="center"
-                        android:text="♫  Audio"
-                        android:textSize="15sp"
-                        android:textColor="#222222"
-                        android:layout_marginEnd="10dp" />
-
 
                     <!-- DOCUMENTS -->
 
-                    <TextView
-                        android:id="@+id/categoryDocuments"
-                        android:layout_width="125dp"
-                        android:layout_height="48dp"
-                        android:gravity="center"
-                        android:text="▤  Documents"
-                        android:textSize="15sp"
-                        android:textColor="#222222"
-                        android:layout_marginEnd="10dp" />
-
 
                     <!-- OTHER -->
-
-                    <TextView
-                        android:id="@+id/categoryOther"
-                        android:layout_width="105dp"
-                        android:layout_height="48dp"
-                        android:gravity="center"
-                        android:text="▣  Other"
-                        android:textSize="15sp"
-                        android:textColor="#222222"/>
 
                 </LinearLayout>
 
@@ -304,94 +255,6 @@
             <!-- IMAGE FILE -->
             <!-- ================================================= -->
 
-            <LinearLayout
-                android:id="@+id/fileImageItem"
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingVertical="8dp">
-
-                <!-- IMAGE PREVIEW -->
-
-                <ImageView
-                    android:id="@+id/imagePreview"
-                    android:layout_width="58dp"
-                    android:layout_height="58dp"
-                    android:scaleType="centerCrop"
-                    android:background="#EEEEEE" />
-
-                <!-- DETAILS -->
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="8dp">
-
-                    <TextView
-                        android:id="@+id/imageFileName"
-                        android:text="nature_view.jpg"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textColor="#171717"
-                        android:maxLines="1"
-                        android:ellipsize="end"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="/storage/emulated/0/Download"
-                        android:textSize="11sp"
-                        android:textColor="#777777"
-                        android:maxLines="1"
-                        android:ellipsize="end"
-                        android:layout_marginTop="4dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <!-- SIZE + TIME -->
-
-                <LinearLayout
-                    android:layout_width="75dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="end">
-
-                    <TextView
-                        android:text="2.45 MB"
-                        android:textSize="13sp"
-                        android:textColor="#222222"
-                        android:gravity="end"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="10:30 AM"
-                        android:textSize="11sp"
-                        android:textColor="#777777"
-                        android:gravity="end"
-                        android:layout_marginTop="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <!-- MORE -->
-
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="55dp"
-                    android:gravity="center"
-                    android:text="⋮"
-                    android:textSize="22sp" />
-
-            </LinearLayout>
-
 
             <View
                 android:layout_width="match_parent"
@@ -402,83 +265,6 @@
             <!-- ================================================= -->
             <!-- VIDEO FILE -->
             <!-- ================================================= -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingVertical="8dp">
-
-                <TextView
-                    android:layout_width="58dp"
-                    android:layout_height="58dp"
-                    android:gravity="center"
-                    android:text="▶"
-                    android:textSize="28sp"
-                    android:textColor="#FFFFFF"/>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="8dp">
-
-                    <TextView
-                        android:text="travel_vlog.mp4"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textColor="#171717"
-                        android:maxLines="1"
-                        android:ellipsize="end"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="/storage/emulated/0/Download"
-                        android:textSize="11sp"
-                        android:textColor="#777777"
-                        android:layout_marginTop="4dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="75dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="end">
-
-                    <TextView
-                        android:text="125.6 MB"
-                        android:textSize="13sp"
-                        android:textColor="#222222"
-                        android:gravity="end"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="10:28 AM"
-                        android:textSize="11sp"
-                        android:textColor="#777777"
-                        android:gravity="end"
-                        android:layout_marginTop="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="55dp"
-                    android:gravity="center"
-                    android:text="⋮"
-                    android:textSize="22sp" />
-
-            </LinearLayout>
 
 
             <View
@@ -491,146 +277,27 @@
             <!-- PDF -->
             <!-- ================================================= -->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingVertical="8dp">
-
-                <TextView
-                    android:layout_width="58dp"
-                    android:layout_height="58dp"
-                    android:gravity="center"
-                    android:text="PDF"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"/>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:paddingStart="12dp">
-
-                    <TextView
-                        android:text="invoice_2025.pdf"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textColor="#171717"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="/storage/emulated/0/Download"
-                        android:textSize="11sp"
-                        android:textColor="#777777"
-                        android:layout_marginTop="4dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:text="320 KB"
-                    android:textSize="13sp"
-                    android:layout_width="65dp"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="55dp"
-                    android:gravity="center"
-                    android:text="⋮"
-                    android:textSize="22sp" />
-
-            </LinearLayout>
-
 
             <!-- ================================================= -->
             <!-- AUDIO -->
             <!-- ================================================= -->
 
             <LinearLayout
+                android:id="@+id/downloadFileContainer"
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingVertical="8dp">
-
-                <TextView
-                    android:layout_width="58dp"
-                    android:layout_height="58dp"
-                    android:gravity="center"
-                    android:text="♫"
-                    android:textSize="30sp"
-                    android:textColor="#FFFFFF"/>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:paddingStart="12dp">
-
-                    <TextView
-                        android:text="background_music.mp3"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textColor="#171717"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="/storage/emulated/0/Download"
-                        android:textSize="11sp"
-                        android:textColor="#777777"
-                        android:layout_marginTop="4dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:text="4.8 MB"
-                    android:textSize="13sp"
-                    android:layout_width="65dp"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="55dp"
-                    android:gravity="center"
-                    android:text="⋮"
-                    android:textSize="22sp" />
-
-            </LinearLayout>
+                android:paddingVertical="8dp"
+                android:padding="20dp"/>
 
 
             <!-- ================================================= -->
             <!-- YESTERDAY -->
             <!-- ================================================= -->
 
-            <TextView
-                android:text="Yesterday"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#171717"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
 
             <!-- 🟩 REAL FILE LIST -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/downloadRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"
-                android:clipToPadding="false"
-                android:paddingBottom="10dp" />
 
             <!-- 🟩 SHOWN WHEN NO FILES ARE FOUND -->
             <TextView

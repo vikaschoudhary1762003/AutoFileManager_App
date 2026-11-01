@@ -1,152 +1,303 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical"
-    android:background="#BE1EC1"
+    android:background="#FFFFFF"
+
     tools:context=".ScanStorage">
 
+
+    <!-- ===================================================== -->
     <!-- TOP BAR -->
+    <!-- ===================================================== -->
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
+
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:paddingStart="18dp"
+
+        android:paddingStart="16dp"
         android:paddingEnd="12dp"
-        android:background="#FFFAFA"
-        android:paddingTop="40dp">
+        android:paddingTop="20dp"
+
+        android:background="#FFFFFF">
+
 
         <!-- BACK BUTTON -->
+
         <TextView
             android:id="@+id/BackButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+
             android:gravity="center"
+
             android:text="←"
-            android:textSize="24sp"
+            android:textSize="27sp"
             android:textColor="#202124"
+
             android:clickable="true"
-            android:focusable="true" />
+            android:focusable="true"/>
+
 
         <!-- TITLE -->
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="SCAN RESULT"
-            android:textColor="#171717"
-            android:textSize="19sp"
-            android:textStyle="bold" />
 
-        <!-- MORE BUTTON -->
-        <TextView
-            android:id="@+id/notificationButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_weight="1"
+
             android:gravity="center"
-            android:text="⋮"
-            android:textSize="24sp"
-            android:textColor="#202124"
-            android:clickable="true"
-            android:focusable="true" />
+
+            android:text="Scan Storage"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#171717"/>
+
+
+        <!-- EMPTY SPACE -->
+        <!-- Keeps title centered -->
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="45dp"/>
 
     </LinearLayout>
 
-    <!-- MAIN CONTENT -->
+
+    <!-- ===================================================== -->
+    <!-- MAIN SCROLL AREA -->
+    <!-- ===================================================== -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+
         android:layout_weight="1"
+
         android:fillViewport="true"
-        android:background="#FFFFFF"
         android:scrollbars="none">
 
-        <!-- CONTENT INSIDE SCROLLVIEW -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:orientation="vertical"
-            android:padding="16dp">
 
-            <!-- PAGE TITLE -->
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="20dp">
+
+
+            <!-- ================================================= -->
+            <!-- PAGE DESCRIPTION -->
+            <!-- ================================================= -->
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Scan Results"
-                android:textSize="22sp"
+
+                android:text="Potential Junk Files"
+                android:textSize="24sp"
                 android:textStyle="bold"
+
                 android:textColor="#171717"
-                android:layout_marginBottom="16dp" />
 
-            <!-- DUPLICATE FILES -->
+                android:layout_marginTop="8dp"/>
+
+
+            <TextView
+                android:id="@+id/scanStatus"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Scanning storage..."
+                android:textSize="14sp"
+                android:textColor="#777777"
+
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="16dp"/>
+
+
+            <!-- ================================================= -->
+            <!-- SUMMARY CARD -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+
+                android:padding="16dp"
+
+                android:background="@drawable/bg_green_card">
+
+
+                <!-- ICON -->
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+
+                    android:gravity="center"
+
+                    android:text="🗑"
+                    android:textSize="30sp"/>
+
+
+                <!-- SUMMARY INFORMATION -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:orientation="vertical"
+
+                    android:paddingStart="12dp">
+
+
+                    <TextView
+                        android:id="@+id/junkTotalSize"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="0 B"
+
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+
+                        android:textColor="#111111"/>
+
+
+                    <TextView
+                        android:id="@+id/junkTotalCount"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="0 files found"
+
+                        android:textSize="14sp"
+
+                        android:textColor="#555555"
+
+                        android:layout_marginTop="3dp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- INFORMATION -->
+            <!-- ================================================= -->
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Duplicate Files"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#202124"
-                android:padding="16dp"
-                android:background="#F5F5F5"
-                android:layout_marginBottom="10dp" />
 
-            <!-- UNUSED APPS -->
-            <TextView
+                android:text="Temporary, cache, thumbnail and empty files"
+
+                android:textSize="13sp"
+                android:textColor="#777777"
+
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <!-- ================================================= -->
+            <!-- FILE LIST -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/junkFileContainer"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Unused Apps"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#202124"
-                android:padding="16dp"
-                android:background="#F5F5F5"
-                android:layout_marginBottom="10dp" />
 
-            <!-- LARGE FILES -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Large Files"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#202124"
-                android:padding="16dp"
-                android:background="#F5F5F5"
-                android:layout_marginBottom="10dp" />
+                android:orientation="vertical"/>
 
-            <!-- JUNK FILES -->
-
-            <!-- EMPTY FILES -->
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="#F5F5F5"
-                android:padding="16dp"
-                android:text="Junk Files"
-                android:textColor="#202124"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Empty Files"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#202124"
-                android:padding="16dp"
-                android:background="#F5F5F5"
-                android:layout_marginBottom="10dp" />
 
         </LinearLayout>
 
     </ScrollView>
+
+
+    <!-- ===================================================== -->
+    <!-- BOTTOM ACTION BAR -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+
+        android:elevation="8dp"
+
+        android:background="#FFFFFF">
+
+
+        <!-- SELECTED INFORMATION -->
+
+        <TextView
+            android:id="@+id/selectedFileText"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:text="0 Files Selected (0 B)"
+
+            android:textSize="14sp"
+            android:textStyle="bold"
+
+            android:textColor="#333333"/>
+
+
+        <!-- DELETE -->
+
+        <Button
+            android:id="@+id/deleteButton"
+
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+
+            android:text="Delete"
+
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+            android:textColor="#FFFFFF"
+
+            android:backgroundTint="#E53935"/>
+
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -2,7 +2,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Android 12L and below -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+
+    <!-- Legacy Android: write/delete shared-storage files -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+
+    <!-- Android 13+ media permissions -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <!-- Android 14+: selected photos and videos -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+
+    <!-- Broad storage access for a genuine file-manager use case -->
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <!-- Installed application discovery -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <!-- App usage statistics: special user access required -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
 
     <application
         android:allowBackup="true"
@@ -12,69 +37,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AutoFileManager">
+        android:theme="@style/Theme.AutoFileManager"
+        android:requestLegacyExternalStorage="true">
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ScanStorage"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".DuplicateFiles"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".LargeFiles"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".OldFiles"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".UnusedApp"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".CompressedFile"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".DownloadFiles"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".AudioFiles"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ImagesFile"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".VideosFile"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".AppsFile"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".DocumentFiles"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".download_file_item"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+
+        <activity android:name=".ScanStorage" android:exported="false" />
+        <activity android:name=".DuplicateFiles" android:exported="false" />
+        <activity android:name=".LargeFiles" android:exported="false" />
+        <activity android:name=".OldFiles" android:exported="false" />
+        <activity android:name=".UnusedApp" android:exported="false" />
+        <activity android:name=".CompressedFile" android:exported="false" />
+        <activity android:name=".DownloadFiles" android:exported="false" />
+        <activity android:name=".AudioFiles" android:exported="false" />
+        <activity android:name=".ImagesFile" android:exported="false" />
+        <activity android:name=".VideosFile" android:exported="false" />
+        <activity android:name=".AppsFile" android:exported="false" />
+        <activity android:name=".DocumentFiles" android:exported="false" />
+
     </application>
 
 </manifest>
